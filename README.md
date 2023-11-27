@@ -1,1 +1,1 @@
-0X00 Hello, World
+Not an empty file
