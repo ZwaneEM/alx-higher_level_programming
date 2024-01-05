@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
+""" Defines a Rectangle """
+
+
 class Rectangle:
+    """
+        Is a 4 sided 2D shape that opposite sides are equal but
+        the adjecent sides are not equal
+
+    """
 
     def __init__(self, width=0, height=0):
         self.height = height
