@@ -1,24 +1,17 @@
 #!/usr/bin/python3
+"""Module that loads, adds and saves arguments to a Python list"""
 from sys import argv
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-
-filename = "add_item.json"
+load_file = __import__('6-load_from_json_file').load_from_json_file
+save_file = __import__('5-save_to_json_file').save_to_json_file
 
 try:
-    list_ = list(load_from_json_file(filename))
+    json_list = load_file('add_item.json')
+except (ValueError, FileNotFoundError):
+    json_list = []
 
-except FileNotFoundError:
+for item in argv[1:]:
+    json_list.append(item)
 
-    save_to_json_file([], filename)
-    pass
-
-list_ = list(load_from_json_file(filename))
-
-for i in range(1, len(argv)):
-
-    list_.append(argv[i])
-
-save_to_json_file(list_, filename)
+save_file(json_list, 'add_item.json')
