@@ -1,29 +1,26 @@
 #!/usr/bin/python3
+"""Defines a class Rectangle based on 7-base_geometry.py.
 
-class BaseGeometry:
+Attributes:
+    width (int): width of the rectangle.
+    height (int): height of the rectangle.
+"""
 
-    """
-        empyt class
-    """
 
-    def area(self):
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
 
 class Rectangle(BaseGeometry):
+    """Class Rectangle"""
 
     def __init__(self, width, height):
+        """Creates new instances of Rectangle.
 
-        self.integer_validator("height", height)
-        self.integer_validator("width", width)
-
+        Args:
+            width (int): width of rectangle.
+            height (int): height of rectangle.
+        """
         self.__width = width
         self.__height = height
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
