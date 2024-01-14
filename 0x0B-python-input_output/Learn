@@ -1,0 +1,44 @@
+How to open a file:
+
+	using open() returns a file object:
+		f = open(filename, mode, encoding=None)
+
+how to write text in a file:
+
+	mode can be:
+		w = write
+		r = read
+		r+ = wr
+		a = appending
+	
+	using the with keyword to open files:
+		
+		- with open("filename", "r", encoding="utf-8") as f:-
+
+	so using:
+		f.write() will write to the file but the with keyword needs to be there
+
+how to read the full content of a file:
+
+	using the read() function by ommiting the size or by making size negative
+
+		f.read() or f.read(-1)
+
+how to read a file line by line:
+
+	using a loop and a readline() function
+
+		for line in f:
+			print(line)
+
+***********************************************************
+
+What is JSON:
+
+	stands for - JavaScript Object Notation
+
+	it is a text format for storing and transporting data
+
+what is serialization:
+
+		

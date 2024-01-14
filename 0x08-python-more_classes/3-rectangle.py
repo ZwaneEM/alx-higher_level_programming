@@ -63,7 +63,7 @@ class Rectangle:
         result = []
 
         if self.__height == 0 or self.__width == 0:
-            return result
+            return ""
 
         else:
             for i in range(self.__height):
