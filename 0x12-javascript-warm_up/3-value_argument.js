@@ -3,10 +3,9 @@
 /* prints the first argument passed */
 
 const args = process.argv.slice(2);
-const argsLength = args.length;
 
-if (argsLength === 0) {
-  console.log('No argument');
-} else {
+if (args[0]) {
   console.log(args[0]);
+} else {
+  console.log('No argument');
 }
