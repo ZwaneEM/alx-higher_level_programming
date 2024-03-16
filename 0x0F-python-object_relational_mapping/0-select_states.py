@@ -18,13 +18,10 @@ if __name__ == "__main__":
         user=username,
         passwd=password,
         db=base
+        charset="utf8"
     )
 
     cr = database.cursor()
-
-    """
-    execute queries
-    """
 
     cr.execute("SELECT * FROM states ORDER BY id ASC")
 
