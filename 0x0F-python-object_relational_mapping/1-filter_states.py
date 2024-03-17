@@ -23,12 +23,14 @@ if __name__ == "__main__":
 
     cursor = conn.cursor()
 
-    sql_query = "SELECT * FROM states WHERE states.name LIKE 'N%'"
+    sql_query = "SELECT * FROM states WHERE states.name \
+    LIKE 'N%' ORDER BY states.id ASC"
     cursor.execute(sql_query)
 
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
 
     cursor.close()
     conn.close()

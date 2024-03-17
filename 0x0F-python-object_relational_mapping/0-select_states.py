@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     cursor = conn.cursor()
 
-    sql_query = "SELECT * FROM states"
+    sql_query = "SELECT * FROM states ORDER BY states.id ASC"
     cursor.execute(sql_query)
 
     rows = cursor.fetchall()
